@@ -16,7 +16,7 @@ with st.sidebar:
 generic_url=st.text_input("URL",label_visibility="collapsed")
 
 ## Gemma Model USsing Groq API
-llm =ChatGroq(model="Llama3-8b-8192", groq_api_key=groq_api_key)
+llm =ChatGroq(model="deepseek-r1-distill-llama-70b", groq_api_key=groq_api_key)
 prompt_template="""
 Provide a summary of the following content in 300 words:
 Content:{text}
@@ -50,3 +50,4 @@ if st.button("Summarize the Content from YT or Website"):
             st.exception(f"Exception:{e}")
 
                     
+
