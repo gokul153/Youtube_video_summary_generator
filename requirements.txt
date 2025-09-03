@@ -1,0 +1,6 @@
+langchain
+langchain-community
+langchain-groq
+streamlit
+validators
+youtube_transcript_api
