@@ -8,6 +8,7 @@ from langchain_community.document_loaders import YoutubeLoader,UnstructuredURLLo
 st.set_page_config(page_title="LangChain: Summarize Text From YT or Website", page_icon="🦜")
 st.title("🦜 LangChain: Summarize Text From YT or Website")
 st.subheader('Summarize URL')
+st.secrets["GROQ_API_KEY"]
 ## Get the Groq API Key and url(YT or website)to be summarized
 with st.sidebar:
     groq_api_key=st.text_input("Groq API Key",value="",type="password")
@@ -47,4 +48,5 @@ if st.button("Summarize the Content from YT or Website"):
                 st.success(output_summary)
         except Exception as e:
             st.exception(f"Exception:{e}")
+
                     
