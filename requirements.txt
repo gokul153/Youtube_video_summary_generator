@@ -4,4 +4,6 @@ langchain-groq
 streamlit
 validators
 pytube
+unstructured
 youtube_transcript_api
+
