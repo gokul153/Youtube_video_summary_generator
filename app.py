@@ -10,9 +10,7 @@ st.title("🦜 LangChain: Summarize Text From YT or Website")
 st.subheader('Summarize URL')
 st.secrets["GROQ_API_KEY"]
 ## Get the Groq API Key and url(YT or website)to be summarized
-with st.sidebar:
-    groq_api_key=st.text_input("Groq API Key",value="",type="password")
-
+groq_api_key = st.secrets["GROQ_API_KEY"]
 generic_url=st.text_input("URL",label_visibility="collapsed")
 
 ## Gemma Model USsing Groq API
@@ -50,4 +48,5 @@ if st.button("Summarize the Content from YT or Website"):
             st.exception(f"Exception:{e}")
 
                     
+
 
